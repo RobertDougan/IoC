@@ -12,7 +12,8 @@ namespace IoC.Ninject
     {
         public override void Load()
         {
-            Bind<IMailSender>().To<MockMailSender>();
+            Bind<IMailSender>().To<MailSender>();
+            Bind<ILogger>().To<MailLogger>();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace IoC.Tests.MailTests
         public void Ensure_MailSender_Sends_Email()
         {
             var testString = "Email sent to robert.dougan@gmail.com with the subject \"Hello\"";
-            IMailSender sender = new MailSender();
+            IMailSender sender = new MailSender(new MailLogger());
             var mailString = sender.SendMail("robert.dougan@gmail.com", "Hello");
             Assert.AreEqual(testString, mailString);
         }

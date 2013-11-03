@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Send an email</h2>
+
+@using (Html.BeginForm("Send", "Mail"))
+{
+    @Html.Label("toAddress");
+    @Html.TextBox("toAddress") 
+    @Html.Label("subject");
+    @Html.TextBox("subject")
+    
+    <button type="submit" id="btn-send">Send</button>
+}

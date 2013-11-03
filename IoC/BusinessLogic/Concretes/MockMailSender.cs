@@ -1,4 +1,5 @@
-﻿using IoC.BusinessLogic.Interfaces;
+﻿using IoC.
+BusinessLogic.Interfaces;
 
 namespace IoC.BusinessLogic.Concretes
 {

@@ -5,16 +5,24 @@ using System.Web;
 using System.Web.Mvc;
 using IoC.BusinessLogic.Concretes;
 using IoC.Helpers;
+using Ninject;
+using System.Reflection;
+using IoC.BusinessLogic.Interfaces;
 
 namespace IoC.Controllers
 {
     public class MailController : Controller
     {
-        public ActionResult SendMail(string toAddress, string subject)
+        public ActionResult Send(string toAddress, string subject)
         {
-            var mh = new MailHelper(new MailSender());
+            IKernel kernel = new StandardKernel();
+            kernel.Load(Assembly.GetExecutingAssembly());
+            IMailSender mailSender = kernel.Get<IMailSender>();
+            
+            var mh = new MailHelper(mailSender);
             var mailString = mh.SendMail(toAddress, subject);
             ViewBag.MailString = mailString;
+
             return View();
         }
 

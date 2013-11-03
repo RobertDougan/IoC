@@ -115,11 +115,10 @@
       <Name>IoC.BusinessLogic</Name>
     </ProjectReference>
     <ProjectReference Include="..\IoC\IoC.csproj">
-      <Project>{7B1141FC-7516-4864-ACF1-C3DFD76DC717}</Project>
+      <Project>{7b1141fc-7516-4864-acf1-c3dfd76dc717}</Project>
       <Name>IoC</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

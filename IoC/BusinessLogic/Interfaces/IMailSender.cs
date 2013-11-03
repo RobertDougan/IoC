@@ -1,4 +1,4 @@
-﻿namespace BusinessLogic.Interfaces
+﻿namespace IoC.BusinessLogic.Interfaces
 {
     public interface IMailSender
     {

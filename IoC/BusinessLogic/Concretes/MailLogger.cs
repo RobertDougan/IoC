@@ -9,6 +9,8 @@ namespace IoC.BusinessLogic.Concretes
 {
     public class MailLogger : ILogger
     {
+        public string LogPath { get; set; }
+        
         public void Log()
         {
             //TODO: Write logging code

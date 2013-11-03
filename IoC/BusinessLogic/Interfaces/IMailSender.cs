@@ -3,5 +3,6 @@
     public interface IMailSender
     {
         string SendMail(string toAddress, string subject);
+        
     }
 }

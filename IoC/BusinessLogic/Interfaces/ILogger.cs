@@ -8,6 +8,7 @@ namespace IoC.BusinessLogic.Interfaces
 {
     public interface ILogger
     {
+        string LogPath { get; set; }
         void Log();
     }
 }
